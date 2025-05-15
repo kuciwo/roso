@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html ⚡ lang="id">
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>DailyNews - Berita Terkini dan Terpercaya</title>
+    <link rel="canonical" href="https://www.dailynews.example/">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    
+    <!-- AMP Components -->
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    
+    <style amp-custom>
+        :root {
+            --primary-color: #c70000;
+            --secondary-color: #333;
+            --text-color: #444;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: var(--text-color);
+        }
+        
+        .header {
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .nav-links {
+            display: none;
+        }
+        
+        .hamburger {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .featured-article {
+            margin-top: 80px;
+            padding: 2rem 1rem;
+            background: #f8f8f8;
+        }
+        
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-content {
+            padding: 1rem;
+        }
+        
+        .category {
+            color: var(--primary-color);
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+        
+        .article-title {
+            color: var(--secondary-color);
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
+        }
+        
+        .excerpt {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #999;
+        }
+        
+        amp-img {
+            background: #f0f0f0;
+        }
+        
+        footer {
+            background: var(--secondary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+                gap: 2rem;
+            }
+            
+            .hamburger {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="main-nav">
+            <div class="logo">DailyNews</div>
+            <button class="hamburger" on="tap:sidebar.toggle">☰</button>
+            <div class="nav-links">
+                <a href="#" class="nav-link">Berita Utama</a>
+                <a href="#" class="nav-link">Politik</a>
+                <a href="#" class="nav-link">Ekonomi</a>
+                <a href="#" class="nav-link">Olahraga</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <amp-sidebar id="sidebar" layout="nodisplay" side="left">
+        <div class="sidebar-content" style="padding: 1rem;">
+            <a href="#" class="nav-link">Berita Utama</a>
+            <a href="#" class="nav-link">Politik</a>
+            <a href="#" class="nav-link">Ekonomi</a>
+            <a href="#" class="nav-link">Olahraga</a>
+        </div>
+    </amp-sidebar>
+
+    <!-- Featured Article -->
+    <section class="featured-article">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div class="category">Teknologi</div>
+            <h1 style="font-size: 2rem; margin: 0.5rem 0;">Inovasi Terbaru di Dunia AI: GPT-5 Resmi Diluncurkan</h1>
+            <div class="meta">
+                <span>John Doe</span>
+                <span>15 Maret 2024</span>
+            </div>
+            <amp-img src="https://source.unsplash.com/1200x800/?ai,technology"
+                width="1200"
+                height="800"
+                layout="responsive"
+                alt="Ilustrasi Kecerdasan Buatan"></amp-img>
+            <p class="excerpt">Perusahaan OpenAI resmi meluncurkan GPT-5 dengan kemampuan multimodal yang revolusioner. Teknologi terbaru ini diklaim mampu memahami konteks percakapan dengan lebih baik...</p>
+        </div>
+    </section>
+
+    <!-- News Grid -->
+    <section class="article-grid">
+        <!-- Article 1 -->
+        <article class="news-card">
+            <amp-img src="https://source.unsplash.com/800x600/?football"
+                width="800"
+                height="600"
+                layout="responsive"
+                alt="Sepak Bola"></amp-img>
+            <div class="card-content">
+                <div class="category">Olahraga</div>
+                <h2 class="article-title">Laga Sengit Derby Manchester Berakhir Imbang</h2>
+                <p class="excerpt">Pertandingan seru antara Manchester United dan Manchester City berakhir dengan skor 2-2...</p>
+                <div class="meta">
+                    <span>Jane Smith</span>
+                    <span>14 Maret 2024</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="news-card">
+            <amp-img src="https://source.unsplash.com/800x600/?government"
+                width="800"
+                height="600"
+                layout="responsive"
+                alt="Gedung Parlemen"></amp-img>
+            <div class="card-content">
+                <div class="category">Politik</div>
+                <h2 class="article-title">Rencana Reformasi Pajak Diumumkan Pemerintah</h2>
+                <p class="excerpt">Pemerintah mengumumkan paket reformasi perpajakan baru yang bertujuan meningkatkan investasi...</p>
+                <div class="meta">
+                    <span>Robert Brown</span>
+                    <span>13 Maret 2024</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="news-card">
+            <amp-img src="https://source.unsplash.com/800x600/?startup"
+                width="800"
+                height="600"
+                layout="responsive"
+                alt="Startup Meeting"></amp-img>
+            <div class="card-content">
+                <div class="category">Bisnis</div>
+                <h2 class="article-title">Startup Fintech Lokal Raih Pendanaan Seri B</h2>
+                <p class="excerpt">Perusahaan rintisan di bidang financial technology berhasil mengumpulkan dana sebesar $50 juta...</p>
+                <div class="meta">
+                    <span>Sarah Johnson</span>
+                    <span>12 Maret 2024</span>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 DailyNews - All rights reserved</p>
+        <div style="margin-top: 1rem;">
+            <a href="#" style="color: white; margin: 0 1rem;">Tentang Kami</a>
+            <a href="#" style="color: white; margin: 0 1rem;">Kontak</a>
+            <a href="#" style="color: white; margin: 0 1rem;">Kebijakan Privasi</a>
+        </div>
+    </footer>
+</body>
+</html>
